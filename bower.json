@@ -1,0 +1,21 @@
+{
+  "name": "lampshades-site",
+  "authors": [
+    "John Workmeister"
+  ],
+  "description": "Website to hightlight the musical stylings of The Lampshades.",
+  "main": "",
+  "license": "GPL v2",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

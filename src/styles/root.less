@@ -1,0 +1,128 @@
+@import 'utils'
+@import 'layout'
+// Fonts
+@LS-font: 'Oswald', sans-serif;
+@bodyfont: 'Roboto', sans-serif;
+
+// Colors
+@black:  #2C322E;
+@blue:   #2077EB;
+@red:    #E93A3F;
+@yellow: #F4C039;
+
+body{
+	font-family: @bodyfont;
+	color: @black;
+	background-color: white;
+}
+
+h1{
+	font-family: @LS-font;
+	color: @black;
+}
+
+.jumbotron{
+	margin-top: 15px;
+	background-color: white;
+	font-family: @LS-font;
+	color: @black;
+	font-size: 32px;
+	text-transform: uppercase;
+	border-radius: 3px !important;
+
+	text-align: center;
+	h1{
+		margin: 0px;
+	}
+}
+
+@media @tablet {
+	#main-nav{
+		font-size: 32px;
+	}
+}
+
+
+
+#main-nav {
+	font-family: @LS-font;
+	font-size: 32px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	overflow: hidden
+}
+#main-nav li {
+	display: table-cell;
+	height: 25px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#main-nav li:first-child {
+	padding-left: 0
+}
+#main-nav li a {
+	width: 100%;
+	display: block;
+	height: 100%;
+	line-height: 25px;
+	text-decoration: none;
+	background-color: #e0e0f0;
+	font-weight: bold;
+	color: #021020;
+}
+#main-nav li a:hover {
+	background-color: #498cd5;
+	color: #ddeeee;
+}
+
+
+.nav-rand-hover-1{
+	.make-nav-colors(@yellow, @blue);
+}
+
+.nav-rand-hover-2{
+	.make-nav-colors(@blue, @yellow);
+}
+
+.nav-rand-hover-3{
+	.make-nav-colors(@yellow, @black);
+}
+
+.nav-rand-hover-4{
+	.make-nav-colors(@black, @yellow);
+}
+
+.nav-rand-hover-5{
+	.make-nav-colors(@red, @black);
+}
+
+.nav-rand-hover-6{
+	.make-nav-colors(@black, @red);
+}
+
+.nav-rand-hover-7{
+	.make-nav-colors(white, @black);
+}
+
+.nav-rand-hover-8{
+	.make-nav-colors(white, @red);
+}
+
+.nav-rand-hover-9{
+	.make-nav-colors(white, @blue);
+}
+
+.make-nav-colors(@fg-hov, @bg-hov){
+	color: @black;
+	background-color: white;
+	transition: all 0.5s ease;
+	&:hover{
+		color: @fg-hov;
+		background-color: @bg-hov;
+	}
+
+}
