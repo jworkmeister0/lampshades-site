@@ -30,7 +30,7 @@ body{
 	background-color: white;
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, h5{
 	font-family: @LS-font;
 }
 
@@ -38,7 +38,7 @@ h1, h2, h3, h4{
 h2{
 	.unselectable(default);
 
-	font-family: @font-four;
+	font-family: @font-two;
 
 	text-align: center;
 	//text-transform: uppercase;
@@ -55,6 +55,9 @@ h2{
 	}@meida @sm{
 		font-size: 36px;
 	}
+}
+h5{
+	font-size: 18px;
 }
 
 hr {
@@ -130,6 +133,10 @@ footer{
 	h4{
 		padding-left: 30px;
 	}
+	h5{
+		margin-top: 0px;
+		margin-bottom: 2px;
+	}
 	p{
 		margin-left: 20px;
 		margin-right: 20px;
@@ -137,6 +144,39 @@ footer{
 	#news-list{
 		@media @sm, @md, @lg{
 			@margin-left: 15px;
+			@padding-right: 0px
+		}
+	}
+
+	#shows-list, #shows-list{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.show-date{
+		font-weight: bold;
+		font-size: 15px;
+		text-decoration: italic;
+	}
+
+	.show-location{
+		font-weight: bold;
+		font-size: 12px;
+		&:first-of-type{
+			font-size: 15px;
+		}
+	}
+
+	.show-details{
+		padding-top: 3px;
+	}
+	.show-location{
+		margin-bottom: 0px;
+	}
+	.show-info{
+		p{
+			margin-left: 0px;
+			padding-left: 0px;
 		}
 	}
 	.news-item{
@@ -182,6 +222,10 @@ footer{
 	background-color: white;
 	transition: all 0.5s ease;
 	&:hover{
+		color: @fg-hov;
+		background-color: @bg-hov;
+	}
+	&.active{
 		color: @fg-hov;
 		background-color: @bg-hov;
 	}

@@ -38,8 +38,10 @@
       $pageList.children("div.page").each(function(){
         if($(this).attr("id") === pageId){
           $(this).fadeIn();
-        } else{ 
-          $(this).hide(); 
+          $(this).addClass("active");
+        } else{
+          $(this).hide();
+          $(this).removeClass("active");
         }
       });
     }
