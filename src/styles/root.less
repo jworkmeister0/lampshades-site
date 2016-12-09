@@ -8,27 +8,56 @@
 @red:    #E93A3F;
 @yellow: #F4C039;
 
+
+// Media Queries
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:      ~"only screen and (max-width: 529px)";
+@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@desktop-xl:  ~"only screen and (min-width: 1129px)";
+
 body{
 	font-family: @bodyfont;
 	color: @black;
 	background-color: white;
 }
 
-h1{
+h1, h2, h3, h4{
 	font-family: @LS-font;
+}
+
+// used for page titles
+h2{
+	text-transform: uppercase;
+	font-size: 34px;
+
+	padding-left: 46px;
+
+	margin-top:    20px;
+	margin-bottom: 20px;
 }
 
 .jumbotron{
 	.unselectable(default);
-	margin-top: 15px;
-	background-color: white;
-	font-family: @LS-font;
-	color: @black;
-	font-size: 32px;
+
+	font-family:    @LS-font;
+	font-size:      32px;
 	text-transform: uppercase;
+	text-align:     center;
+
+	color: @black;
+	background-color: white;
+
 	border-radius: 3px !important;
 
-	text-align: center;
+	// basically the size of the jtron
+	padding-top:    15px;
+	padding-bottom: 15px;
+
+	margin-top: 15px;
 
 	h1{
 		margin: 0px;
@@ -38,13 +67,18 @@ h1{
 #main-nav {
 	font-family: @LS-font;
 	font-size: 32px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	display: table;
-	table-layout: fixed;
+	font-weight: bold;
+	text-decoration: none;
+
+	display:  table;
+	width:    100%;
 	overflow: hidden;
+
+	list-style:   none;
+	table-layout: fixed;
+
+	padding: 0;
+	margin:  0;
 
 	li{
 		.unselectable(pointer);
@@ -63,9 +97,7 @@ h1{
 			display: block;
 			height: 100%;
 			line-height: 25px;
-			text-decoration: none;
 			background-color: #e0e0f0;
-			font-weight: bold;
 			color: #021020;
 
 			&:hover{
@@ -74,6 +106,18 @@ h1{
 			}
 		}
 	}
+}
+
+.page {
+	margin-top: 30px;
+}
+
+.row{
+	padding-bottom: 25px;
+}
+
+.thumbnail{
+	border-radius: 1px;
 }
 
 

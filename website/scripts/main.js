@@ -38,7 +38,7 @@
       getNextRandClass: function(){
         var className = "nav-rand-hover-";
         className += this.getNextRand();
-        console.log(className);
+        //console.log(className);
         return className;
       }
     };
