@@ -9,7 +9,7 @@
 
       $(".jumbotron").addClass(jumboRando.getNextRandClass());
 
-      $.each($("#main-nav li"), function(){
+      $.each($("#main-nav span"), function(){
         $(this).addClass(navHoverRand.getNextRandClass());
       });
     }
