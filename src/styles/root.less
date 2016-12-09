@@ -61,11 +61,16 @@ hr {
 	border-top: 1px solid @yellow;
 }
 
+a{
+	color: inherit;
+	&:visited{
+		color: inherit;
+	}
+}
+
 footer{
 	.unselectable(default);
-	p{
-		text-align: center;
-	}
+	text-align: center;
 	p.small{
 		text-align: right;
 		font-size: 8px;
@@ -106,15 +111,15 @@ footer{
 	display: table;
 
 	@media @xs {
-		font-size: 24px
+		font-size: 22px
 	} @media @sm{
 		font-size: 28px;
 	}
 
-	span{
+	a{
 		display: table-cell;
 		text-align: center;
-		width: 20%;
+		text-decoration: none;
 	}
 }
 

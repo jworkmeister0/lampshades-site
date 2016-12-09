@@ -17,7 +17,6 @@
 		<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 
-
 		<!-- styles -->
 		<link rel="stylesheet" href="styles.css" type="text/css" media="all" />
 
@@ -29,28 +28,53 @@
 		<script src="//localhost:9000/livereload.js"></script>
 	</head>
 
-
 	<body>
 
 		<div class="container-fluid">
 			<div class="jumbotron">
 				<h1> THE LAMPSHADES </h1>
 			</div>
-		</div> <!-- container -->
-
-		<div id="main-nav"> 
-			<span> NEWS </span>
-			<span> SHOWS </span>
-			<span> ABOUT </span>
-			<span> MEDIA </span>
-			<span> MERCH </span>
 		</div>
 
-			<hr>
+		<div id="main-nav"> 
+			<a href="#news"> <span> NEWS  </span> </a>
+			<a href="#music"> <span> MUSIC </span> </a>
+			<a href="#bio"> <span> BIO   </span> </a>
+			<a href="#media"> <span> MEDIA </span> </a>
+			<a href="https://thelampshadespgh.bandcamp.com/merch"> <span> MERCH </span> </a>
+		</div>
 
-			<div id="discog" class="container-fluid page">
-				<h2> Discography </h2>
+		<hr>
 
+		<div id="pages">
+
+			<div id="news-page" class="container-fluid page">
+				<h2>News</h2>
+
+				<div id="news-content" class="row">
+
+					<div id="news-list" class="col-xs-12 col-sm-8">
+						<h3> What's Happening </h3>
+						<div class="update">
+							<h4> Update Title </h4>
+							<p> </p>
+						</div>
+					</div>
+
+					<div id="shows-list" class="col-xs-12 col-sm-4">
+						<h3> Shows </h3>
+						<ul>
+							<li> Show One</li>
+							<li> Show Two</li>
+							<li> Show Three</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="music-page" class="container-fluid page">
+				<h2> Music </h2>
 				<div class="row">
 
 					<div id="first-album" class="col-xs-6 col-sm-4 col-lg-3">
@@ -98,15 +122,23 @@
 						</div>
 					</div>
 				</div> <!-- row -->
+			</div> <!-- discog page -->
 
+			<div id="bio-page" class="container-fluid page">
+				<h2>Bio</h2>
+			</div>
 
-			</div> <!-- page -->
+			<div id="media-page" class="container-fluid page">
+				<h2>Media</h2>
+			</div>
 
-			<footer>
-				<p>&copy; The Lampshades (Dane Adelman, Chris Kibler, Jaren Love)</p>
-				<p class="small">
-					<span class="glyphicon glyphicon-heart" aria-hidden="true"></span> John Workmeister 2016
-				</p>
-			</footer>
+		</div>
+
+		<footer>
+			<p>&copy; The Lampshades (Dane Adelman, Chris Kibler, Jaren Love)</p>
+			<p class="small">
+				<span class="glyphicon glyphicon-heart" aria-hidden="true"></span> John Workmeister 2016
+			</p>
+		</footer>
 	</body>
 </html>

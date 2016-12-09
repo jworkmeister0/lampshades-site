@@ -1,7 +1,11 @@
 (function(){
 
   $(function(){
+    var $pageList = $("#pages");
+
+    checkUrlHash();
     applyRandomness();
+    applyEventListeners();
 
     function applyRandomness(){
       var navHoverRand = makeRandomizer(1, 9);
@@ -9,8 +13,34 @@
 
       $(".jumbotron").addClass(jumboRando.getNextRandClass());
 
-      $.each($("#main-nav span"), function(){
+      $.each($("#main-nav").children(), function(){
         $(this).addClass(navHoverRand.getNextRandClass());
+      });
+    }
+
+    function checkUrlHash(){
+      if (!window.location.hash){
+        showPage("news");
+      }
+      else{
+        showPage(window.location.hash);
+      }
+    }
+
+    function applyEventListeners(){
+      window.onhashchange = function(e){
+        showPage(window.location.hash);
+      };
+    }
+
+    function showPage(pageName){
+      var pageId = pageName.split("#").join("") + "-page";
+      $pageList.children("div.page").each(function(){
+        if($(this).attr("id") === pageId){
+          $(this).fadeIn();
+        } else{ 
+          $(this).hide(); 
+        }
       });
     }
   });
