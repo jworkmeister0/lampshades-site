@@ -6,5 +6,5 @@ app.get("/", function(req, res){
 });
 
 app.listen(process.env.PORT || 8080, function(){
-  console.log("listening on " + (precess.env.PORT || 8080));
+  console.log("listening on " + (process.env.PORT || 8080));
 });
