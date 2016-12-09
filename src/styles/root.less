@@ -2,6 +2,11 @@
 @LS-font: 'Oswald', sans-serif;
 @bodyfont: 'Roboto', sans-serif;
 
+@font-one: 'Yellowtail', cursive;
+@font-two: 'Molle', cursive;
+@font-three: 'Pacifico', cursive;
+@font-four: 'Poiret One', cursive;
+
 // Colors
 @black:  #2C322E;
 @blue:   #2077EB;
@@ -33,15 +38,38 @@ h1, h2, h3, h4{
 h2{
 	.unselectable(default);
 
-	text-align: center;
+	font-family: @font-four;
 
-	text-transform: uppercase;
-	font-size: 34px;
+	text-align: center;
+	//text-transform: uppercase;
+
+	font-size: 48px;
+	font-weight: bold;
 
 	//padding-left: 46px;
-
 	margin-top:    20px;
 	margin-bottom: 20px;
+
+	@media @xs{
+		font-size: 28px;
+	}@meida @sm{
+		font-size: 36px;
+	}
+}
+
+hr {
+	border-top: 1px solid @yellow;
+}
+
+footer{
+	.unselectable(default);
+	p{
+		text-align: center;
+	}
+	p.small{
+		text-align: right;
+		font-size: 8px;
+	}
 }
 
 .jumbotron {
@@ -79,9 +107,8 @@ h2{
 
 	@media @xs {
 		font-size: 24px
-	}
-	@media @sm{
-		font-size: 30px;
+	} @media @sm{
+		font-size: 28px;
 	}
 
 	span{
@@ -106,33 +133,15 @@ h2{
 
 
 // Defining colored nav hovers
-.nav-rand-hover-1{
-	.make-nav-colors(@yellow, @blue);
-}
-.nav-rand-hover-2{
-	.make-nav-colors(@blue, @yellow);
-}
-.nav-rand-hover-3{
-	.make-nav-colors(@yellow, @black);
-}
-.nav-rand-hover-4{
-	.make-nav-colors(@black, @yellow);
-}
-.nav-rand-hover-5{
-	.make-nav-colors(@red, @black);
-}
-.nav-rand-hover-6{
-	.make-nav-colors(@black, @red);
-}
-.nav-rand-hover-7{
-	.make-nav-colors(white, @black);
-}
-.nav-rand-hover-8{
-	.make-nav-colors(white, @red);
-}
-.nav-rand-hover-9{
-	.make-nav-colors(white, @blue);
-}
+.nav-rand-hover-1{ .make-nav-colors(@yellow, @blue); }
+.nav-rand-hover-2{ .make-nav-colors(@blue, @yellow); }
+.nav-rand-hover-3{ .make-nav-colors(@yellow, @black); }
+.nav-rand-hover-4{ .make-nav-colors(@black, @yellow); }
+.nav-rand-hover-5{ .make-nav-colors(@red, @black); }
+.nav-rand-hover-6{ .make-nav-colors(@black, @red); }
+.nav-rand-hover-7{ .make-nav-colors(white, @black); }
+.nav-rand-hover-8{ .make-nav-colors(white, @red); }
+.nav-rand-hover-9{ .make-nav-colors(white, @blue); }
 
 // HELPERS AND GENERATORS
 .make-nav-colors(@fg-hov, @bg-hov){
@@ -142,7 +151,6 @@ h2{
 		color: @fg-hov;
 		background-color: @bg-hov;
 	}
-
 }
 
 .unselectable(@cursor: pointer){
