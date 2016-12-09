@@ -2,6 +2,7 @@
 
   $(function(){
     applyRandomness();
+
     function applyRandomness(){
       var navHoverRand = makeRandomizer(1, 9);
       var jumboRando = makeRandomizer(7, 9);
@@ -17,14 +18,15 @@
 
   function makeRandomizer(min, max){
     var arr = [];
-    arr = shuffle(arr);
     var index = 0;
     var className = "nav-rand-hover-";
 
     for (var i = min; i <= max; i++){
       arr.push(i);
     }
+
     arr = shuffle(arr);
+
     return {
       getNextRand: function(){
         index += 1;
@@ -40,6 +42,7 @@
         return className;
       }
     };
+
     function shuffle(array) {
       var currentIndex = array.length, temporaryValue, randomIndex;
 
