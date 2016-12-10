@@ -78,8 +78,50 @@ a{
 }
 
 footer{
+
 	.unselectable(default);
 	text-align: center;
+	text-transform: uppercase;
+
+	.social-buttons{
+		font-family: @LS-font;
+	}
+
+	.fa{
+		font-size: 38px;
+	}
+	.btn{
+		font-family: @LS-font;
+		font-size: 30px;
+
+		.fa-twitter, &.btn-twitter{
+			color: #1DA1F2;
+		}
+		.fa-facebook, &.btn-facebook{
+			color: #3B5998;
+		}
+		.fa-spotify, &.btn-spotify{
+			color: #1ED760;
+		}
+		.fa-bandcamp, &.btn-bandcamp{
+			color: #639AA9;
+		}
+		.fa-soundcloud, &.btn-soundcloud{
+			color: #FF5500;
+		}
+	}
+	a{
+		padding-left:  20px !important;
+		padding-right: 20px !important;
+	}
+	p{
+		margin-top: 20px;
+		font-size: 12px;
+		strong{
+			font-size: 16px;
+			font-family: @LS-font;
+		}
+	}
 	p.small{
 		text-align: right;
 		font-size: 8px;
@@ -90,11 +132,11 @@ footer{
 	.unselectable(pointer);
 
 	font-family:    @LS-font;
-	font-size:      32px;
 	text-align:     center;
+	font-size: 30px;
 
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
 
 	color: @black;
 	background-color: white;
@@ -108,10 +150,10 @@ footer{
 			font-size: 18px;
 		}
 		@media @md{
-			font-size: 24px;
+			font-size: 23px;
 		}
 		@media @lg{
-			font-size: 30px;
+			font-size: 29px;
 		}
 	}
 
@@ -131,7 +173,7 @@ footer{
 	}
 }
 
-#main-nav {
+#main-nav, .social-buttons {
 	.unselectable(pointer);
 	font-family: @LS-font;
 	font-size: 36px;
