@@ -308,6 +308,14 @@ hr.small{
 	}
 }
 
+.make-header-colors(@bg){
+	background-color: white;
+	transition: all 0.5s ease;
+	&:hover{
+		color: @black
+	}
+}
+
 .unselectable(@cursor: pointer){
 	cursor: @cursor;
 	user-select: none;
