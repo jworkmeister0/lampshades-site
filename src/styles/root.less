@@ -52,7 +52,7 @@ h2{
 
 	@media @xs{
 		font-size: 28px;
-	}@meida @sm{
+	}@media @sm{
 		font-size: 36px;
 	}
 }
@@ -93,6 +93,19 @@ footer{
 
 	border-radius: 1px !important;
 
+	#slogan{
+		line-height: 1;
+		padding-top: 5px;
+		@media @xs, @sm {
+			font-size: 20px;
+		}
+		@media @md{
+			font-size: 26px;
+		}
+		@media @lg{
+			font-size: 32px;
+		}
+	}
 
 	// basically the size of the jtron
 	padding-top:    15px;
@@ -107,7 +120,6 @@ footer{
 
 	h2{
 		font-family: @LS-font;
-		font-size: 90%;
 	}
 }
 
