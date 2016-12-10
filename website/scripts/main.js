@@ -32,10 +32,6 @@
         showPage(window.location.hash);
       };
 
-      $("#jumbotron").click(function(){
-        $("#slogan").fadeToggle();
-      });
-
     }
 
     function showPage(pageName){
