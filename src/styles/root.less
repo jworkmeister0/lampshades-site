@@ -402,28 +402,13 @@ hr.small{
 
 .mountain{
 	.basic-background-img(@img-mountain);
-	height: 100px;
-	margin-top: 25px;
+	height: 75px;
+	margin-top: 10px;
 	margin-bottom: 25px;
-}
-
-hr.mountain {
-	margin-top: 2em;
-	padding: 0;
-	border: none;
-	color: #333;
-	text-align: center;
-}
-
-hr.mountain:after{
-	display: block;
-	position: relative;
-	height: 100px;
-	top: -50px;
-
-	content: "";
-	background: @img-mountain no-repeat 0 0;
-	background-size: 100%;
+	@media @xs{
+		height: 50px;
+		margin-bottom: 10px;
+	}
 }
 
 #media-page{
