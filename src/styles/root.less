@@ -271,9 +271,9 @@ footer{
 }
 
 .title{
-		font-family: @LS-font;
-		font-size: 20px;
-		font-style: italic;
+	font-family: @LS-font;
+	font-size: 20px;
+	font-style: italic;
 }
 
 .page {
@@ -294,7 +294,35 @@ footer{
 		border-radius: 1px;
 		display: block;
 		border: 1px solid #DDD;
-		padding: 0px 20px 0px 20px;
+
+		.hidden-player {
+			background: #282828;
+
+			margin-bottom: 15px;
+
+			iframe {
+				display: block;
+				transition: opacity 0.125s;
+				.js & {
+					opacity: 0;
+
+					&.loaded {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		iframe{
+			height: auto;
+		}
+
+		&:first-of-type{
+			padding-left: 20px;
+		}
+		&:last-of-type{
+			padding-right: 20px;
+		}
 		margin-bottom: 20px;
 	}
 
@@ -335,12 +363,18 @@ footer{
 			border: 1px solid @black;
 		}
 
+		&.album-buy{
+			color: @blue;
+			float: right;
+			background-color: white;
+			border: 1px solid @blue;
+		}
+
 		&:hover{
 			color: @yellow;
 			background-color: black;
 		}
 	}
-
 }
 
 #bio-page{
@@ -357,9 +391,24 @@ footer{
 }
 
 hr.small{
-		margin-left: 5vw;
-		margin-right: 5vw;
-		border-top: 1px solid #BBB;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	border-top: 1px solid #BBB;
+}
+
+#media-page{
+	.space1{
+		.basic-background-img(url(images/line/tv_media.png));
+		height: 500px;
+	}
+
+	.basic-background-img(@url){
+		width: 100%;
+		background-image: @url;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
 }
 
 

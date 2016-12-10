@@ -1,5 +1,13 @@
 (function(){
 
+	var HTML = {
+		play: '<span class="glyphicon glyphicon-play" aria-hidden="true"></span>',
+		stop: '<span class="glyphicon glyphicon-stop" aria-hidden="true"></span>',
+		arrowDown: '<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>',
+		arrowUp: '<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>',
+		dollar: '<span class="glyphicon glyphicon-usd" aria-hidden="true"></span>',
+	};
+
 	$(function(){
 		var $pageList = $("#pages");
 
@@ -16,6 +24,7 @@
 			$.each($("#main-nav").children(), function(){
 				$(this).addClass(navHoverRand.getNextNavClass());
 			});
+
 		}
 
 		function checkUrlHash(){
@@ -35,6 +44,44 @@
 			$(".jumbotron").click(function(){
 				$("body").toggleClass("inverted");
 			});
+
+			$(window).on("load resize", applySpotifyEmbedHack);
+
+			$.each($(".album"), function(i, elt){
+				var $playButton      = $(elt).find(".album-listen");
+				var $buyButton       = $(elt).find(".album-buy");
+				var $playerContainer = $(elt).find(".hidden-player");
+				var $player          = $playerContainer.find("iframe");
+
+				$playButton.html(" Listen     " + HTML.play);
+				$buyButton.html("Buy " + HTML.dollar);
+
+				// initially hide all player container
+				$playerContainer.toggle();
+
+				$playButton.click(function(){
+
+					if ($player.is(":hidden")){
+						$playButton.html("Hide " + HTML.stop);
+						$player.attr("src", $player.data("src"));
+						$playerContainer.fadeIn();
+						$player.css("width", parseInt($playerContainer.css('width')) - 2);
+					}else{
+						$playButton.html("Listen     " + HTML.play);
+						$player.attr("src", "");
+						$playerContainer.fadeOut();
+					}
+				});
+
+			});
+
+
+			function applySpotifyEmbedHack(){
+				$('iframe').each( function() {
+					$(this).css('width', parseInt($(this).parent().css('width')) - 2);
+				});
+			}
+
 		}
 
 		function showPage(pageName){
