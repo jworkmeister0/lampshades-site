@@ -13,6 +13,10 @@
 @red:    #E93A3F;
 @yellow: #F4C039;
 
+// Image urls
+@img-tv: url(images/line/tv_media.png);
+@img-mountain: url(images/line/mountain.png);
+
 // Media Queries
 @hidpi: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
 ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
@@ -396,21 +400,51 @@ hr.small{
 	border-top: 1px solid #BBB;
 }
 
+.mountain{
+	.basic-background-img(@img-mountain);
+	height: 100px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+hr.mountain {
+	margin-top: 2em;
+	padding: 0;
+	border: none;
+	color: #333;
+	text-align: center;
+}
+
+hr.mountain:after{
+	display: block;
+	position: relative;
+	height: 100px;
+	top: -50px;
+
+	content: "";
+	background: @img-mountain no-repeat 0 0;
+	background-size: 100%;
+}
+
 #media-page{
 	.space1{
 		.basic-background-img(url(images/line/tv_media.png));
 		height: 500px;
 	}
-
-	.basic-background-img(@url){
-		width: 100%;
-		background-image: @url;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
+	.space2{
+		.basic-background-img(url(images/line/mountain.png));
+		height: 500px;
 	}
+
 }
 
+.basic-background-img(@url){
+	width: 100%;
+	background-image: @url;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
 
 .hidden{
 	display: none;
