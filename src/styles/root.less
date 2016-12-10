@@ -28,6 +28,12 @@ body{
 	font-family: @bodyfont;
 	color: @black;
 	background-color: white;
+
+	&.inverted{
+		background-color: #111;
+		color: white;
+	}
+
 }
 
 h1, h2, h3, h4, h5{
@@ -116,7 +122,7 @@ footer{
 	margin-top: 15px;
 
 	h1{
-		margin-top:    10px;
+		margin-top: 0px;
 		margin-bottom: 10px;
 	}
 
@@ -129,6 +135,10 @@ footer{
 	.unselectable(pointer);
 	font-family: @LS-font;
 	font-size: 36px;
+	text-transform: uppercase;
+
+	padding-left: 15px;
+	padding-right: 15px;
 
 	width: 100%;
 	display: table;
@@ -326,6 +336,10 @@ hr.small{
 .nav-rand-hover-8{ .make-nav-colors(white, @red); }
 .nav-rand-hover-9{ .make-nav-colors(white, @blue); }
 
+.header-rand-1 { .make-header-colors(@blue); }
+.header-rand-2 { .make-header-colors(@red); }
+.header-rand-3 { .make-header-colors(@black); }
+
 // HELPERS AND GENERATORS
 .make-nav-colors(@fg-hov, @bg-hov){
 	background-color: white;
@@ -341,10 +355,11 @@ hr.small{
 }
 
 .make-header-colors(@bg){
-	background-color: white;
+	background-color: @bg;
+	color: white;
 	transition: all 0.5s ease;
 	&:hover{
-		color: @black
+		color: @yellow
 	}
 }
 
