@@ -77,7 +77,10 @@
         className += this.getNextRand();
         //console.log(className);
         return className;
-      }
+			},
+			reshuffle: function(){
+				arr = shuffle(arr);
+			}
     };
 
     function shuffle(array) {
