@@ -16,7 +16,7 @@
 		applyEventListeners();
 
 		function applyRandomness(){
-			var navHoverRand = makeRandomizer(1, 9);
+			var navHoverRand = makeRandomizer(1, 8);
 			var jumboRando = makeRandomizer(1, 3);
 
 			$(".jumbotron").addClass(jumboRando.getNextJumbotronClass());

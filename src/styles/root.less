@@ -42,8 +42,12 @@
 
 body{
 	font-family: @bodyfont;
-	color: @black;
-	background-color: white;
+	color: white;
+	background-color: black;
+
+	#jumbo-container, #main-nav, .dreamtop{
+		background-color: white;
+	}
 
 	&.inverted{
 		transition: all 0.5s ease;
@@ -67,7 +71,7 @@ h2{
 
 	text-align: center;
 
-	font-size: 72px;
+	font-size: 84px;
 	font-weight: 700;
 
 	//padding-left: 46px;
@@ -97,9 +101,16 @@ a:focus, a:hover{
 	filter: invert(1);
 }
 
+#pages.container-fluid{
+	background-color: black;
+	color: white;
+
+}
+
 
 footer{
 
+	background-color: black;
 	.unselectable(default);
 	text-align: center;
 	text-transform: uppercase;
@@ -145,13 +156,8 @@ footer{
 	padding-left: 15px !important;
 	padding-right: 5px !important;
 
-	color: @blue;
-	background-color: inherit;
-
-	// background-image: url("images/line/rings.png");
-	// background-repeat: no-repeat;
-	// background-size: contain;
-	// background-position: right center;
+	color: @black;
+	background-color: white;
 
 	> * { vertical-align: middle; }
 	h1{
@@ -207,6 +213,7 @@ footer{
 	height: 50px;
 	background-repeat: repeat-x;
 }
+
 
 #main-nav, .social-buttons {
 	.unselectable(pointer);
@@ -318,7 +325,7 @@ footer{
 .page {
 	margin-top: -9%;
 	h2{
-		padding-right: 20%;
+		padding-right: 15%;
 	}
 }
 
@@ -495,9 +502,8 @@ hr.small{
 .nav-rand-hover-4{ .make-nav-colors(@black,  @yellow); }
 .nav-rand-hover-5{ .make-nav-colors(@red,    @black); }
 .nav-rand-hover-6{ .make-nav-colors(@black,  @red); }
-.nav-rand-hover-7{ .make-nav-colors(white,   @black); }
-.nav-rand-hover-8{ .make-nav-colors(white,   @red); }
-.nav-rand-hover-9{ .make-nav-colors(white,   @blue); }
+.nav-rand-hover-7{ .make-nav-colors(white,   @red); }
+.nav-rand-hover-8{ .make-nav-colors(white,   @blue); }
 
 .header-rand-1 { .make-header-colors(@blue); }
 .header-rand-2 { .make-header-colors(@red); }
@@ -532,7 +538,7 @@ hr.small{
 	&.current{
 		background-color: white;
 		color: black;
-		font-size: 120%;
+		font-size: 140%;
 	}
 }
 
