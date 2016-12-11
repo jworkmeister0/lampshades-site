@@ -91,7 +91,16 @@
 		}
 
 		function showPage(pageName){
-			var pageId = pageName.split("#").join("") + "-page";
+			var pageId    = pageName.split("#").join("") + "-page";
+			var activeNav = pageName.split("#").join("") + "-link";
+			$("#main-nav").children().each(function(i, elt){
+				if ($(this).attr("id") === activeNav){
+					$(this).addClass("current");
+				}else{
+					$(this).removeClass("current");
+				}
+			});
+
 			$pageList.children("div.page").each(function(){
 				if($(this).attr("id") === pageId){
 					$(this).fadeIn();
