@@ -43,6 +43,9 @@
 
 			$(".jumbotron").click(function(){
 				$("body").toggleClass("inverted");
+				$(".space1").toggleClass("img-invert");
+				$(".space2").toggleClass("img-invert");
+				$(".mountain").toggleClass("img-invert");
 			});
 
 			$(window).on("load resize", applySpotifyEmbedHack);

@@ -34,6 +34,7 @@ body{
 	background-color: white;
 
 	&.inverted{
+		transition: all 0.5s ease;
 		background-color: #111;
 		color: white;
 	}
@@ -76,9 +77,11 @@ hr {
 
 a{
 	color: inherit;
-	&:visited{
-		color: inherit;
-	}
+}
+
+.img-invert{
+   -webkit-filter: invert(1);
+   filter: invert(1);
 }
 
 footer{
@@ -417,7 +420,7 @@ hr.small{
 		height: 500px;
 	}
 	.space2{
-		.basic-background-img(url(images/line/mountain.png));
+		.basic-background-img(url(images/line/dog.png));
 		height: 500px;
 	}
 
@@ -434,6 +437,7 @@ hr.small{
 .hidden{
 	display: none;
 }
+
 
 // Defining colored nav hovers
 .nav-rand-hover-1{ .make-nav-colors(@yellow, @blue); }
@@ -452,7 +456,6 @@ hr.small{
 
 // HELPERS AND GENERATORS
 .make-nav-colors(@fg-hov, @bg-hov){
-	background-color: white;
 	transition: all 0.5s ease;
 	&:hover{
 		color: @fg-hov;
