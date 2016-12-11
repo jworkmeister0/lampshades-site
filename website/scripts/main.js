@@ -45,6 +45,7 @@
 				$("body").toggleClass("inverted");
 				$(".space1").toggleClass("img-invert");
 				$(".space2").toggleClass("img-invert");
+				$(".dreamtop").toggleClass("img-invert");
 				$(".mountain").toggleClass("img-invert");
 			});
 
