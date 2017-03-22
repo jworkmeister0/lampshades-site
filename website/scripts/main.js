@@ -30,8 +30,7 @@
 		function checkUrlHash(){
 			if (!window.location.hash){
 				showPage("news");
-			}
-			else{
+			} else{
 				showPage(window.location.hash);
 			}
 		}
@@ -41,19 +40,10 @@
 				showPage(window.location.hash);
 			};
 
-			$(".jumbotron").click(function(){
-				$("body").toggleClass("inverted");
-				$(".space1").toggleClass("img-invert");
-				$(".space2").toggleClass("img-invert");
-				$(".mountain").toggleClass("img-invert");
-				$("img").each(function(){
-					$(this).toggleClass("img-invert");
-				});
-			});
-
+			$("#sunshine .album-listen").css("visibility", "hidden");
 			$(window).on("load resize", applySpotifyEmbedHack);
 
-			$.each($(".album"), function(i, elt){
+			$.each($(".album"), function bindClickHandlerToEachAlbum(i, elt){
 				var $playButton      = $(elt).find(".album-listen");
 				var $buyButton       = $(elt).find(".album-buy");
 				var $playerContainer = $(elt).find(".hidden-player");
@@ -72,22 +62,26 @@
 						$player.attr("src", $player.data("src"));
 						$playerContainer.fadeIn();
 						$player.css("width", parseInt($playerContainer.css('width')) - 2);
+						$player.css("width", parseInt($playerContainer.css('height')) - 2);
 					}else{
 						$playButton.html("Listen     " + HTML.play);
 						$player.attr("src", "");
 						$playerContainer.fadeOut();
 					}
+				for (var i = 0; i < 10; i += 2 ){
+					setTimeout(applySpotifyEmbedHack, i * 1000);
+				}
 				});
+
 
 			});
 
 
 			function applySpotifyEmbedHack(){
-				$('iframe').each( function() {
+				$('iframe').each(function(){
 					$(this).css('width', parseInt($(this).parent().css('width')) - 2);
 				});
 			}
-
 		}
 
 		function showPage(pageName){

@@ -48,14 +48,6 @@ body{
 	#jumbo-container, #main-nav, .dreamtop{
 		background-color: white;
 	}
-
-	&.inverted{
-		transition: all 0.5s ease;
-		background-color: #111;
-		color: white;
-		h1{ color: white; }
-	}
-
 }
 
 h1, h2, h3, h4, h5{
@@ -84,6 +76,7 @@ h2{
 		font-size: 48px;
 	}
 }
+
 h5{
 	font-size: 18px;
 }
@@ -362,7 +355,6 @@ footer{
 		}
 
 		iframe{
-			height: auto;
 		}
 
 		&:first-of-type{
@@ -465,16 +457,14 @@ hr.small{
 }
 
 #media-page{
-	.space1{ .basic-background-img(@img-tv); }
-	.space2{ .basic-background-img(@img-dog); }
-	.space3{ .basic-background-img(@img-bird); }
-	.space4{ .basic-background-img(@img-face); }
-	.space5{ .basic-background-img(@img-rings); }
-	.space6{ .basic-background-img(@img-sun); }
-	.space7{ .basic-background-img(@img-hands); }
-	.space8{ .basic-background-img(url("images/line/tv.png")); }
+	h3{
+		font-size: 32px;
+	}
 	.preview{
 		height: 250px;
+		iframe{
+			width: 100%;
+		}
 	}
 }
 
@@ -490,6 +480,9 @@ hr.small{
 	display: none;
 }
 
+#sunshine .album-listen{
+	visibility: hidden;
+}
 
 // Defining colored nav hovers
 .nav-rand-hover-1{ .make-nav-colors(@yellow, @blue); }
