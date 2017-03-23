@@ -60,19 +60,19 @@
 					if ($player.is(":hidden")){
 						$playButton.html("Hide " + HTML.stop);
 						$player.attr("src", $player.data("src"));
-						$playerContainer.fadeIn();
+						$playerContainer.slideDown();
 						$player.css("width", parseInt($playerContainer.css('width')) - 2);
 						$player.css("width", parseInt($playerContainer.css('height')) - 2);
 					}else{
 						$playButton.html("Listen     " + HTML.play);
 						$player.attr("src", "");
-						$playerContainer.fadeOut();
+						$playerContainer.slideUp();
 					}
-				for (var i = 0; i < 10; i += 2 ){
-					setTimeout(applySpotifyEmbedHack, i * 1000);
-				}
-				});
 
+					for (var i = 0; i < 10; i += 2 ){
+						setTimeout(applySpotifyEmbedHack, i * 1000);
+					}
+				});
 
 			});
 
